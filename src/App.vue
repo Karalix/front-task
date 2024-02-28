@@ -5,13 +5,7 @@
       <div>
         <label for="hours-old">{{ student.name }} is</label>
         <div class="flex gap-2">
-          <input
-            v-model="student.age"
-            name="hours-old"
-            id="hours-old"
-            class="border-b-gray-300 border-b w-[50px]"
-            type="number"
-          />
+          <FormatedNumberInput v-model="student.age" />
           <div class="text">hours old</div>
         </div>
       </div>
@@ -21,6 +15,7 @@
 
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
+import FormatedNumberInput from './components/FormatedNumberInput.vue'
 
 const student = reactive<{
   name: string
