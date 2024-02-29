@@ -36,7 +36,7 @@ const inputHandler = (event: Event) => {
             name="hours-old"
             id="hours-old"
             class="border-gray-300 border rounded p-1 focus-visible:outline-none"
-            :class="{'border-purple-500': myValue !== null, 'border': myValue !== null}"
+            :class="{'border-[#906FEE]': myValue !== null, 'border-[1.5px]': myValue !== null}"
             :style="{ width: inputWidth + 'px'}"
           />
     <span class="invisible absolute" id="scale">{{ myValue }}</span>
