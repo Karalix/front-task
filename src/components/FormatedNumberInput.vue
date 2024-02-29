@@ -9,7 +9,7 @@ const inputWidth = computed(() => {
     if (myValue.value === null) {
         return 0
     } else {
-        return document.getElementById('scale')?.offsetWidth || 0
+        return document.getElementById('scale')?.offsetWidth != undefined ? document.getElementById('scale').offsetWidth + 30 : 0
     }
 })
 
@@ -35,8 +35,8 @@ const inputHandler = (event: Event) => {
             @input="inputHandler"
             name="hours-old"
             id="hours-old"
-            class="border-gray-300 border rounded p-1"
-            :class="{'border-purple-500': myValue !== null, 'border-[2px]': myValue !== null}"
+            class="border-gray-300 border rounded p-1 focus-visible:outline-none"
+            :class="{'border-purple-500': myValue !== null, 'border': myValue !== null}"
             :style="{ width: inputWidth + 'px'}"
           />
     <span class="invisible absolute" id="scale">{{ myValue }}</span>
