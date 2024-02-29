@@ -6,9 +6,9 @@
       </div>
       <div>
         <label for="hours-old" class="koulen-regular" :class="{'text-[#3D06D7]': student.age != null}">{{ student.name }} is</label>
-        <div class="flex gap-3 mt-3">
+        <div class="flex items-center gap-3 mt-3">
           <FormatedNumberInput v-model="student.age" />
-          <div class="text inter-400">hours old</div>
+          <div class="text inter-400 h-fit">hours old</div>
         </div>
       </div>
     </div>
